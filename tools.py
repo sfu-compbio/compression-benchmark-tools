@@ -65,15 +65,6 @@ sam = [
 		},
 	},
 	{
-		"name": "tsc",
-		"params": {
-			"cmd": 		"tsc",
-			"cmparg": 	"-f -s -o {out} {in}", 
-			"decarg":	"-f -s -d -o {out} {in}",
-			"ext":		"tsc"
-		}
-	},
-	{
 		"name": "cbc",
 		"params": {
 			"cmd": 		"cbc",
@@ -193,7 +184,7 @@ fastq = [
 	{
 		"name": "orcom",
 		"params": {
-			"cmd": 		"orcom",
+			"cmd": 		"orcom.sh",
 			"cmparg": 	"e {threads} '{in}' {out}",
 			"decarg":	"d {threads} {in} {out}",
 			"ext":		"orcom",
@@ -246,15 +237,6 @@ fastq = [
 			"decarg":	"-d {in}  {out} -O",
 			"ext":		"slimfastq",
 			"paired":	True,
-		}
-	},
-	{
-		"name": "beetl",
-		"params": {
-			"cmd": 		"beetl",
-			"cmparg": 	"bwt -i {in} -o {out} --concatenate-output --output-format ASCII -q permutels ", ### --no-parallel-prefetch ?!, --paired-reads-input <ref>
-			"decarg":	"unbwt -i {in} -o {out}",
-			"ext":		"beetl"
 		}
 	},
 	{
