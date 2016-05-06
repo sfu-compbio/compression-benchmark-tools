@@ -7,7 +7,7 @@ Please refer to [AWS Quickstart](https://github.com/sfu-compbio/compression-benc
 ## Tools
 
 | Name | Release | Note |
-|-|-|-|
+|------|-----|----|
 | pigz | [2.3.3](http://zlib.net/pigz/pigz-2.3.3.tar.gz) | |
 | pbzip2 |  [1.1.12](https://launchpad.net/pbzip2/1.1/1.1.12/+download/pbzip2-1.1.12.tar.gz) | Uses [bzip2 1.0.6](http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz) <br> *Recompiled for Ubuntu* |
 | Cramtools | [0c89dd8](https://github.com/enasequence/cramtools/tree/0c89dd8) | Needs Java |
