@@ -27,7 +27,7 @@ if [ "$1" == "e" ] ; then
 	file=$(basename $2)
 	# FQC doesm't like .fq extensions: make sure it is .fastq
 	file="${file%.*}.fastq"
-	ln -f $2 $file
+	ln -f $input $file
 	
 	PATH=${PATH}:. fqc -c -i $file -o $(basename $3)
 	exit_code=$?

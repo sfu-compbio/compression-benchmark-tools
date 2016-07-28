@@ -14,7 +14,12 @@ if [ "${input:0:1}" != "/" ];
 then
 	input="${pwd}/$input"
 fi
-echo "Parameters: ",$1,$input,$3,$4,${srcdir},${dir}
+reference="$4"
+if [ "${reference:0:1}" != "/" ]; 
+then
+	ref="${pwd}/$reference"
+fi
+echo "Parameters: ",$1,$input,$3,$reference,${srcdir},${dir}
 
 # symlink LW-FQZip binaries
 cd ${dir}
@@ -27,9 +32,9 @@ if [ "$1" == "e" ] ; then
 	file=$(basename $2)
 	# LW-FQZip doesm't like .fq extensions: make sure it is .fastq
 	file="${file%.*}.fastq"
-	ref=$(basename $4)
-	ln -f $2 $file
-	ln -f $4 $ref
+	ref=$(basename $reference)
+	ln -f $input $file
+	ln -f $reference $ref
 
 	PATH=${PATH}:. LWFQZip -c -t 1 -i $file -r $ref
 	exit_code=$?
@@ -41,9 +46,9 @@ else
 	input="${input%.*}.fastq.lz"
 	file=$(basename $input)
 	
-	ref=$(basename $4)
+	ref=$(basename $reference)
 	ln -f $input $file
-	ln -f $4 $ref
+	ln -f $reference $ref
 
 	PATH=${PATH}:. LWFQZip -d -t 1 -i $file -r $ref
 	exit_code=$?
