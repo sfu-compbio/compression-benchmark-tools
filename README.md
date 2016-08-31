@@ -1,6 +1,8 @@
-# Compression Benchmarking: Tools
+# HTS Compression Benchmarking: Tools
 
-Here is the list of included tools. Unless otherwise specified, all executables are exactly those ones we used in the paper. Because of library dependencies, some tools had to be re-compiled for AWS. All manually compiled tools were compiled with gcc 4.8 or 5.2.
+This repository contains the binaries of compression tools used for [HTS Compression Benchmark](https://github.com/sfu-compbio/compression-benchmark).
+
+Unless otherwise specified, all executables are exactly those ones we used in the paper. Because of library dependencies, some tools had to be re-compiled for AWS. All manually compiled tools were compiled with gcc 4.8 or 5.2.
 
 Please refer to [Benchmarking Quickstart](https://github.com/sfu-compbio/compression-benchmark/blob/master/aws.md) for more information how to set up benchmarking environment.
 
