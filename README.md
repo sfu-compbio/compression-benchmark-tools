@@ -1,4 +1,4 @@
-# HTS Compression Benchmarking: Tools
+# [HTS Compression Benchmark Suite](https://github.com/sfu-compbio/compression-benchmark) <br> Compression Tools
 
 This repository contains the binaries of compression tools used for [HTS Compression Benchmark](https://github.com/sfu-compbio/compression-benchmark).
 
